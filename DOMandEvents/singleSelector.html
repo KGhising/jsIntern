@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singleSelector</title>
+</head>
+<body>
+    <h2 id="idSelector"></h2>
+    <ol>
+        <li>Learned js fundamentals.</li>
+        <li class="select">Completed Udemy js tutorials section 1 and section 2</li>
+        <li id="select">Begin DOM section</li>
+    </ol>
+</body>
+<script>
+    // Select element by id
+    const selector = document.getElementById('idSelector');
+    selector.innerHTML = 'Things i did today!';
+    selector.style.color = "skyblue";
+    selector.style.fontFamily = "arial";
+
+    // Select Element by query selector
+        document.querySelector('li').style.color = 'yellow';
+        document.querySelector('.select').style.color = "red";
+        document.querySelector('#select').style.color = "green"
+</script>
+</html>
