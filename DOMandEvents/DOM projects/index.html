@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM project</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- fontawasome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="contianer">
@@ -15,15 +17,17 @@
                     <div class="input-field">
                         <input type="text" name="task" id="task" placeholder="New Task">
                     </div>
-                    <input type="submit" value="Add Task">
+                    <input class="add-task" type="submit" value="Add Task">
                 </form>
             </div>
             <div class="card-action">
-                <h5 id="tasks-title">Tasks</h5>
+                <h4 id="tasks-title">Tasks</h4>
                 <div class="input-field">
                     <input type="text" name="filter" id="filter" placeholder="Filter task">
                 </div>
-                <ul class="collection"></ul>
+                <ul class="collection">
+                    
+                </ul>
                 <a href="#" class="clear-tasks">Clear Task</a>
             </div>
         </main>
