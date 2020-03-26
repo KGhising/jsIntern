@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan calculator</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h3>Loan calculator</h3>
+            <div class="card">
+                <form id="loan-form">
+                    <div class="form-group">
+                       <span>$</span>
+                       <input type="number" id="amount" placeholder="Loan amount">
+                    </div>
+                    <div class="form-group">
+                        <span>%</span>
+                        <input type="number" id="interest" placeholder="Interest">
+                    </div>
+                    <div class="form-group">
+                        <input type="number"id="years" placeholder="Years to pay">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Calculate" class="btn">
+                    </div>
+                </form>
+                <!-- loader -->
+                <!-- <div id="loading">
+                    <img src="./img/loading.gif" alt="loading">
+                </div> -->
+                <!-- result -->
+                <div id="results">
+                    <div class="form-group">
+                        <span>monthly</span>
+                        <input type="number" id="monthly-payment" disabled>
+                    </div>
+                    <div class="form-group">
+                        <span>total</span>
+                        <input type="number" id="total-payment" disabled>
+                    </div>
+                    <div class="form-group">
+                        <span>total interest</span>
+                        <input type="number" id="total-interest" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

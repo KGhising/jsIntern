@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin-top: 100px;
+    margin-left: 30%;
+}
+/* card */
+.card{
+    display: flex;
+    margin-top: 20px;
+}
+.form-group{
+    margin-top: 10px;
+}
+.form-group input{
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    display: block;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+}
+#years{
+    margin-top: 30px;
+}
+
+/* result */
+#results{
+    margin-left: 50px;
+}
+#results span{
+     opacity: 0.8;
+}
+#results input{
+    opacity: 0.8;
+}
+/* submit button */
+.form-group .btn{
+    margin-top: 30px;
+    border: none;
+    color: white;
+    padding: 8px 0px;
+    background-color: black;
+    cursor: pointer;
+}
