@@ -25,30 +25,32 @@
                         <input type="number"id="years" placeholder="Years to pay">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Calculate" class="btn">
+                        <input type="submit" id="submit" value="Calculate" class="btn">
                     </div>
                 </form>
                 <!-- loader -->
-                <!-- <div id="loading">
+                <div id="loading">
                     <img src="./img/loading.gif" alt="loading">
-                </div> -->
+                </div>
                 <!-- result -->
                 <div id="results">
+                    <h4>Result</h4>
                     <div class="form-group">
                         <span>monthly</span>
-                        <input type="number" id="monthly-payment" disabled>
+                        <input type="number" id="monthlyPayment" disabled>
                     </div>
                     <div class="form-group">
                         <span>total</span>
-                        <input type="number" id="total-payment" disabled>
+                        <input type="number" id="totalPayment" disabled>
                     </div>
                     <div class="form-group">
                         <span>total interest</span>
-                        <input type="number" id="total-interest" disabled>
+                        <input type="number" id="totalInterest" disabled>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>

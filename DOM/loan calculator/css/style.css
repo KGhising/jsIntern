@@ -50,3 +50,20 @@ body{
     background-color: black;
     cursor: pointer;
 }
+
+/* Error display */
+.container .alert{
+    margin-bottom: 20px;
+    color: darkred;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: lightgray;
+    width: 300px;
+    padding: 5px 8px;
+}
+
+/* loading result*/
+
+#loading, #results{
+    display: none;
+}
