@@ -2,7 +2,7 @@
 
 let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = getWinningNum(min, max),
     guessLeft = 3;
 
 // UI element
@@ -17,6 +17,17 @@ const guess = document.getElementById('guess'),
 minNum.textContent = min;
 maxNum.textContent = max;
 
+// winning Number generator
+function getWinningNum(min, max) {
+    return Math.floor(Math.random()*(max-min+1) + min);
+}
+// play again event listener
+ guess.addEventListener('mousedown', function(e){
+    if (e.target.className === 'play-again') {
+        window.location.reload();
+    }
+ });
+
 // event listener
 guessSubmit.addEventListener('click', function(){
     let guess = parseInt(guessInput.value);
@@ -24,26 +35,29 @@ guessSubmit.addEventListener('click', function(){
     // validate input
     if (isNaN(guess) || guess < min || guess > max) {
         setMessage(`Please enter a number between ${min} and ${max}`, 'red');
+        // clear input
+        guessInput.value = '';
     }
-
-    // check if guess is winning number
-    if (guess === winningNum) {
-        //win game
-        gameOver(true , `${winningNum} is correct guess!`);
-    } else{
-        // Wrong number
-        guessLeft -=1;
-
-        if (guessLeft === 0) {
-            // loss game
-            gameOver(false , `Game over! Correct number was ${winningNum}`);
+    else{
+        // check if guess is winning number
+        if (guess === winningNum) {
+            //win game
+            gameOver(true , `${winningNum} is correct guess!`);
         } else{
-            // Wrong answer
-            // border red
-            guessInput.style.borderColor = 'red';
-            // clear input
-            guessInput.value = '';
-            setMessage(`${guess} is not correct, ${guessLeft} guess left`, 'red');
+            // Wrong number
+            guessLeft -=1;
+
+            if (guessLeft === 0) {
+                // loss game
+                gameOver(false , `Game over! Correct number was ${winningNum}`);
+            } else{
+                // Wrong answer
+                // border red
+                guessInput.style.borderColor = 'red';
+                // clear input
+                guessInput.value = '';
+                setMessage(`${guess} is not correct, ${guessLeft} guess left`, 'red');
+            }
         }
     }
 });
@@ -59,6 +73,9 @@ function gameOver(won, msg) {
     
     // set message
     setMessage(msg);
+    // Play again
+    guessSubmit.value = 'Play Again';
+    guessSubmit.className += 'play-again';
 }
 
 // setMessage
