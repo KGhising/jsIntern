@@ -38,7 +38,7 @@ UI.prototype.showAlert = function(message, className){
     const section = document.querySelector('.section');
     const container = document.querySelector('.container');
     // inserting error element
-    container.insertBefore(div, section);
+    container.insertBefore(div, section); 
 
     // hide after 3 sec
     setTimeout(function(){
@@ -59,6 +59,7 @@ UI.prototype.deleteBook = function(target){
     document.getElementById('bookAuthor').value = '';
     document.getElementById('bookISBN').value = '';
  }
+ 
 // event listener
 document.getElementById('bookForm').addEventListener('submit',function(e){
     // getting value from input
