@@ -67,3 +67,15 @@ table th{
     background-color: red;
     width: 300px;
 }
+
+/* style added book list  */
+#List tr{
+    color: black;
+    height: 25px;
+    background-color: limegreen;
+    text-align: center;
+}
+#List a{
+    color: black;
+    text-decoration: none;
+}
