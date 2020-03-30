@@ -8,48 +8,47 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <main>
-        <div class="container">
-            <section>
-                <div class="add-book">
-                    <h2>Add book</h2>
-                    <form id="bookForm">
-                        <div class="title">
-                            <label for="bookTitle">Title</label><br>
-                            <input type="text" id="bookTitle">
-                        </div>
-                        <div class="author">
-                            <label for="bookAuthor">Author</label><br>
-                            <input type="text" id="bookAuthor">
-                        </div>
-                        <div id="isbn"> 
-                            <label for="bookISBN">ISBN</label><br>
-                            <input type="text" id="bookISBN">
-                        </div>
-                        <div id="submit">
-                            <input type="submit" value="Submit">
-                        </div>
-                    </form>
-                </div>
-                <div class="bookList">
-                    <h2>Book lists</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Author</th>
-                                <th>ISBN</th>
-                                <th></th>
-                            </tr> 
-                            <tbody id="List">
-        
-                            </tbody> 
-                        </thead>
-                    </table>   
-                </div>
-            </section>
-        </div>
-    </main>
+    <div class="container">
+        <section class="section">
+            <div class="add-book">
+                <h2>Add book</h2>
+                <form id="bookForm">
+                    <div class="title">
+                        <label for="bookTitle">Title</label><br>
+                        <input type="text" id="bookTitle">
+                    </div>
+                    <div class="author">
+                        <label for="bookAuthor">Author</label><br>
+                        <input type="text" id="bookAuthor">
+                    </div>
+                    <div id="isbn"> 
+                        <label for="bookISBN">ISBN</label><br>
+                        <input type="text" id="bookISBN">
+                    </div>
+                    <div id="submit">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div class="bookList">
+                <h2>Book lists</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>ISBN</th>
+                            <th></th>
+                        </tr> 
+                        <tbody id="List">
+    
+                        </tbody> 
+                    </thead>
+                </table>   
+            </div>
+        </section>
+    </div>
+
     <script src="./js/script.js"></script>
 </body>
 </html>

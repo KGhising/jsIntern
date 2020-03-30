@@ -61,7 +61,9 @@ table th{
 }
 .success{
     background-color: green;
+    width: 300px;
 }
 .error{
     background-color: red;
+    width: 300px;
 }
