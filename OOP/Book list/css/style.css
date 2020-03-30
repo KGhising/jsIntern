@@ -17,18 +17,18 @@ section{
 }
 
 /* add book */
-#book-form{
+#bookForm{
     margin-top: 20px;
 }
-#book-form input{
+#bookForm input{
     width: 300px;
     height: 30px;
     margin-top: 5px;
 }
-#book-form > div{
+#bookForm > div{
     margin-bottom: 20px;
 }
-#book-form label{
+#bookForm label{
     font-weight: 550;
 }
 #submit input{
@@ -39,13 +39,11 @@ section{
 }
 
 /* book list */
-.book-list{
+.bookList{
     margin-left: 50px;
 }
-.book-list table{
+table{
     margin-top: 20px;
-}
-table {
     width: 500px;
 }
 table th{
