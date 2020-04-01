@@ -47,3 +47,18 @@ HTTP.prototype.put = function(url, data, callback) {
 } 
 
 // make an HTTP DELETE resquest
+HTTP.prototype.delete = function(url, callback){
+    this.http.open('DELETE', url, true);
+
+    let self = this;
+
+    this.http.onload = function(){
+        if(self.http.status === 200){
+            callback(null, 'POST deleted');
+        }else{
+            callback('Error: ' + self.http.status);
+        }
+    }
+    
+    this.http.send();
+}

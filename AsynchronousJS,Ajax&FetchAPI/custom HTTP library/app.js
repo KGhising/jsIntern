@@ -27,11 +27,21 @@ const data = {
 // });
 
 // Update Post
-http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(err, posts){
+// http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(err, posts){
+//     if(err){
+//         console.log(err);
+//     }    
+//     else{
+//         console.log(posts);
+//     }
+// });
+
+// delete data
+http.delete('https://jsonplaceholder.typicode.com/posts/1', function(err, response){
     if(err){
         console.log(err);
     }    
     else{
-        console.log(posts);
+        console.log(response);
     }
 });
