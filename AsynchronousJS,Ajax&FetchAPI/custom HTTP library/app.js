@@ -1,4 +1,4 @@
-let http = new HTTP;
+const http = new HTTP;
 
 // GET post
 http.get('https://jsonplaceholder.typicode.com/posts', function(err, posts){
