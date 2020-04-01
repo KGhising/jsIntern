@@ -8,7 +8,7 @@ HTTP.prototype.get = function(url, callback){
 
     let self = this;
 
-    this.http.onlaod = function(){
+    this.http.onload = function(){
         if(self.http.status === 200){
             callback(null, self.http.responseText);
         }else{
@@ -20,6 +20,6 @@ HTTP.prototype.get = function(url, callback){
 }
 // make an HTTP POST resquest
 
-// make an HTTP PUT resquest
+// make an HTTP PUT resquest    
 
 // make an HTTP DELETE resquest
