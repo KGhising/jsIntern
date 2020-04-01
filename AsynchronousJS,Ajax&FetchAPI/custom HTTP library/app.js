@@ -17,7 +17,17 @@ const data = {
 };
 
 //create POST
-http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, posts){
+// http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, posts){
+//     if(err){
+//         console.log(err);
+//     }    
+//     else{
+//         console.log(posts);
+//     }
+// });
+
+// Update Post
+http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(err, posts){
     if(err){
         console.log(err);
     }    

@@ -32,6 +32,18 @@ HTTP.prototype.post = function(url, data, callback) {
     this.http.send(JSON.stringify(data));
 }
 
-// make an HTTP PUT resquest    
+// make an HTTP PUT resquest   
+HTTP.prototype.put = function(url, data, callback) {
+    this.http.open('PUT', url, true);
+    // content type and data type(JSON)
+    this.http.setRequestHeader('Content-type', 'application/json');
+
+    let self = this;
+    this.http.onload = function(){
+            callback(null, self.http.responseText);
+    }
+
+    this.http.send(JSON.stringify(data));
+} 
 
 // make an HTTP DELETE resquest
