@@ -5,21 +5,17 @@ document.getElementById('btn3').addEventListener('click', getApiData);
 // get local Text function
 function getText(){
     fetch('test.txt')
-    .then(function(response){
-        return response.text();  
-    }) 
-    .then(function(data){
+    .then(response => response.text()) 
+    .then(data =>{
         document.getElementById('output').innerHTML = data;
-    });
+    })
 }
 
 // get local JSON function
 function getJSON(){
     fetch('post.json')
-    .then(function(response){
-        return response.json();  
-    }) 
-    .then(function(data){
+    .then(response => response.json()) 
+    .then(data => {
         let output = '';
         data.forEach(function(post){
             output +=`
@@ -27,16 +23,14 @@ function getJSON(){
             `;
         });
         document.getElementById('output').innerHTML = output; 
-    });
+    })
 }
 
 // get from external API
 function getApiData(){
     fetch('https://api.github.com/users')
-    .then(function(response){
-        return response.json();  
-    }) 
-    .then(function(data){
+    .then(response => response.json()) 
+    .then(data => {
         let output = '';
         data.forEach(function(user){
             output +=`
@@ -44,5 +38,5 @@ function getApiData(){
             `;
         });
         document.getElementById('output').innerHTML = output; 
-    });
+    })
 }
