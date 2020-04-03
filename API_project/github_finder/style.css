@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2, h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* main section */
+.input-section{
+    margin-top: 100px;
+    margin-left: 30%;
+}
+nav{
+    background-color: black;
+    width: 500px;
+    height: 40px;
+    text-align: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+.container{
+    border: 1px solid black;
+    margin-top: 30px;
+    width: 500px;
+}
+.card{
+    margin-left: 20px;
+}
+input{
+    width: 440px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/* section section */
+#profile{
+    width: 600px;
+    margin-left: 26%;
+}
+#profile img{
+    width: 100%;
+    margin-top: 30px;
+}
+a{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.info{
+    margin-top: 30px;
+}
+span{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+.info ul li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}

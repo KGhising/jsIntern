@@ -5,18 +5,17 @@ class UI{
     showProfile(user){
         this.profile.innerHTML = `
         <section>
-            <div class = "gitDisplay">
-                <div class = "image">
-                    <img src = "${user.avatar_url}">
-                    <a href = "${user.html_url}" target="_blank" class = "btn">Profile</a> 
-                </div>
-                <div class = "info">
-                    <span class = "repo">Public Repository: ${user.public_repos}</span>
-                    <span class = "gist">Public Gist: ${user.public_gists}</span>
-                    <span class = "follower">Public Follower: ${user.followers}</span>
-                    <span class = "following">Public Repository: ${user.following}</span>
+            <div class="gitDisplay">
+                <div class="image">
+                    <img src="${user.avatar_url}"><br><br>
+                    <a href="${user.html_url}" target="_blank" class = "btn">Profile</a> 
+                <div class="info">
+                    <span class="repo">Public Repository: ${user.public_repos}</span>
+                    <span class="gist">Public Gist: ${user.public_gists}</span>
+                    <span class="follower">Follower: ${user.followers}</span>
+                    <span class="following">Following: ${user.following}</span>
                     <br><br>
-                    <ul class = "listGroup">
+                    <ul class="listGroup">
                         <li>Company: ${user.company}</li>
                         <li>Website/blog: ${user.blog}</li>
                         <li>Location: ${user.location}</li>
@@ -25,7 +24,7 @@ class UI{
                 </div>  
             </div>
             <h3>Latest Repository</h3>
-            <div id = "latestRepo" >
+            <div id="latestRepo" >
 
             </div>
         </section>
