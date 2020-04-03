@@ -9,12 +9,12 @@ class UI{
             <div class="gitDisplay">
                 <div class="image">
                     <img src="${user.avatar_url}"><br><br>
-                    <a href="${user.html_url}" target="_blank" class = "btn">Profile</a> 
+                    <a class="visit-profile" href="${user.html_url}" target="_blank" class = "btn">Profile</a> 
                 <div class="info">
-                    <span class="repo">Public Repository: ${user.public_repos}</span>
-                    <span class="gist">Public Gist: ${user.public_gists}</span>
-                    <span class="follower">Follower: ${user.followers}</span>
-                    <span class="following">Following: ${user.following}</span>
+                    <span class="user">Public Repository: ${user.public_repos}</span>
+                    <span class="user">Public Gist: ${user.public_gists}</span>
+                    <span class="user">Follower: ${user.followers}</span>
+                    <span class="user">Following: ${user.following}</span>
                     <br><br>
                     <ul class="listGroup">
                         <li>Company: ${user.company}</li>
@@ -25,12 +25,37 @@ class UI{
                 </div>  
             </div>
             <h3>Latest Repository</h3>
-            <div id="latestRepo" >
+            <div id="repo" >
 
             </div>
         </section>
         `;  
     }
+
+    // show repository
+    showRepos(repos){
+        let output = '';
+
+        repos.forEach(function(repo){
+            output +=`
+                <div class="repo">
+                    <div class="repoLink">
+                        <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                    </div>
+                    <div class="repoDetail">
+                        <span class="repo">Star: ${repo.stargazers_count}</span>
+                        <span class="repo">Watcher: ${repo.watchers_count}</span>
+                        <span class="repo">Forks: ${repo.forms_count}</span>
+                    </div>
+                </div>
+                <hr><br>
+            `;
+        });
+        // Output repos
+        document.getElementById('repo').innerHTML = output;
+    }
+
+
     // show alert
     showAlert(message, className){
         // Clear any remaining alert
@@ -46,7 +71,7 @@ class UI{
         const search = document.querySelector('.card');
         // insertn alert
         container.insertBefore(div, search);
-        // timeout after 3 s
+        // timeout after 3s
         setTimeout(() => {
             this.clearAlert();
         }, 2000);
