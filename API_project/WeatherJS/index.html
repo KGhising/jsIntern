@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <!-- style link -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <main>
         <div class="container">
             <div class="w-info">
-                <h2 id="w-loaction"></h2>
+                <h2 id="w-location"></h2>
                 <h3 id="w-desc"></h3>
                 <h3 id="w-string"></h3>
-                <img id="w-icon">
                 <ul id="w-details">
                     <li id="w-humidity"></li>
-                    <li id="w-dewpoint"></li>
-                    <li id="w-feelilke"></li>
-                    <li id="w-wind"></li>
+                    <li id="w-temp"></li>
+                    <li id="w-minTemp"></li>
+                    <li id="w-maxTemp"></li>
+                    <li id="w-pressure"></li>
                 </ul>
                 <button id="btn" data-taget="locModel">Change Location</button>
             </div>
         </div>
     </main>
+    <script src="./weather.js"></script>
+    <script src="./ui.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>
