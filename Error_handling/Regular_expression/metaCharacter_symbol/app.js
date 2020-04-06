@@ -28,9 +28,24 @@ re = /hel{2,}o/i; // must occur atleast between {m,} times
 // parethesis () -grouping
 re = /([0-9]x){3}/; // Grouping [0-9]x 
 
+// shorthand character classes
+re = /\w/; // Word character - alphanumeric
+re = /\w+/; // + 1 or more character
+re = /\W/; // non-word character
+re = /\d/; // match any digit 
+re = /\d+/; // match any digit 0 or more times
+re = /\D/; // match any non-digit
+re = /\s/; // match white space character
+re = /\S/; // match white non-space character
+re = /hell\b/i; // world boundary
+
+// assertion
+re = /x(?=y)/; // match x only if its followed by y
+re = /x(?!y)/; // match x only if its not-followed by y
+
 
 // strring to match
-const str = '3x3x';
+const str = 'xsdksdk';
 const result = re.exec(str);
 console.log(result);
 
