@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile scroller</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            margin-top: 100px;
+            margin-left: 30%;
+            border: 1px solid black;
+            width: 500px;
+        }
+        h1{
+            margin-top: 20px;
+            text-align: center;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 5px 15px;
+            border: none;
+            cursor: pointer;
+            margin-left: 220px;
+            margin-bottom: 20px;
+        }
+        img{
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            margin-left: 200px;
+        }
+        #profileDisplay{
+            margin-top: 20px;
+        }
+        ul{
+            margin-left: 140px;
+        }
+        li{
+            list-style-type: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profileScroller">
+            <h1>Prolfile Scroller</h1>
+            <div id="imageDisplay"></div><br>
+            <div id="profileDisplay"></div>
+            <br>
+            <button id="btn">Next</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
