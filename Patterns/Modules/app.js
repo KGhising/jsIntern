@@ -51,6 +51,6 @@ const ItemCtrl = (function() {
   }
 })();
 
-ItemCtrl.add({id: 1, name: 'John'});
-ItemCtrl.add({id: 2, name: 'Mark'});
+ItemCtrl.add({id: 1, name: 'Kishor'});
+ItemCtrl.add({id: 2, name: 'Sarwon'});
 console.log(ItemCtrl.get(2));
