@@ -43,6 +43,18 @@ const ItemCtrl = (function(){
         return newItem;
 
         },
+        getTotalCalories: function(){
+            let total = 0;
+            // loop through items and add calories
+            data.items.forEach(function(item){
+                total += item.calories;
+            });
+            // Set total calories in database
+            data.totalCalories = total;
+            // return total
+            return data.totalCalories;
+
+        },
 
         logData: function(){
             return data;
@@ -58,7 +70,8 @@ const UICtrl = (function(){
         itemList: '#item-list',
         addBtn: '.add-btn',
         itemNameInput: '#item-name',
-        itemCaloriesInput: '#item-calories'
+        itemCaloriesInput: '#item-calories',
+        totalCalories: '.total-calories'
     }
     // public method
     return{
@@ -109,6 +122,9 @@ const UICtrl = (function(){
         hideList: function(){
             document.querySelector(uiSelector.itemList).style.display = 'none';
         },
+        showTotalCalories: function(totalCalories){
+            document.querySelector(uiSelector.totalCalories).textContent = totalCalories; 
+        },
         getSelectors: function(){
             return uiSelector;
         }
@@ -137,6 +153,11 @@ const AppCtrl = (function(ItemCtrl, UICtrl){
             // add items to UI list
             UICtrl.addListItem(newItem);
 
+            // Get total calories
+            const totalCalories =   ItemCtrl.getTotalCalories();
+             // addd total calories in UI
+            UICtrl.showTotalCalories(totalCalories);
+
             // clear fields
             UICtrl.clearInput();
         }
@@ -156,6 +177,11 @@ const AppCtrl = (function(ItemCtrl, UICtrl){
                 // populate list
                 UICtrl.populateItemList(items);
             }
+            // Get total calories
+            const totalCalories =   ItemCtrl.getTotalCalories();
+             // addd total calories in UI
+            UICtrl.showTotalCalories(totalCalories);
+
             // load event listerner
             loadEventListener();
         }
